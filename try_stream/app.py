@@ -26,9 +26,9 @@ webrtc_streamer(key="example"
                 {
                     "iceServers": [
                         {
-                            urls: "turn:a.relay.metered.ca:443?transport=tcp",
-                            username: "0e053deab7300457f9ecbb03",
-                            credential: "QlkpT5au/NwMGyNj",
+                            "urls": "turn:a.relay.metered.ca:443?transport=tcp",
+                            "username": "0e053deab7300457f9ecbb03",
+                            "credential": "QlkpT5au/NwMGyNj",
                         }
 
                         # ,
