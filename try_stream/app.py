@@ -21,5 +21,28 @@ stop_stream_bottom = st.button('Stop')
 # cv2.destroyAllWindows()
 
 webrtc_streamer(key="example"
-                , rtc_configuration={     "iceServers": [{"urls": ["stun:stun.relay.metered.ca:80"]}]    }
+                , rtc_configuration={
+        "iceServers": [
+            {
+                "urls": ["stun:stun.relay.metered.ca:80"]
+            },
+            {
+                "urls": "turn:a.relay.metered.ca:80",
+                "username": "0e053deab7300457f9ecbb03",
+                "credential": "QlkpT5au/NwMGyNj",
+            }
+        ]    }
                 )
+
+# var pcConfig = {
+#     'iceServers': [
+#         {
+#             'urls': 'stun:stun.l.google.com:19302'
+#         },
+#         {
+#             'urls': 'turn:xxx.xxx.xxx.xxx:3478',     <-- (my external IP address)
+#             'username': 'test',
+#             'password': 'test',
+#         }
+#     ]
+# };
