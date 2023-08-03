@@ -21,28 +21,47 @@ stop_stream_bottom = st.button('Stop')
 # cv2.destroyAllWindows()
 
 webrtc_streamer(key="example"
-                , rtc_configuration={
-        "iceServers": [
-            {
-                "urls": ["stun:stun.relay.metered.ca:80"]
-            },
-            {
-                "urls": "turn:a.relay.metered.ca:80",
-                "username": "0e053deab7300457f9ecbb03",
-                "credential": "QlkpT5au/NwMGyNj",
-            }
-        ]    }
+                , rtc_configuration=
+                {
+                    "iceServers": [
+                        {
+                            "urls": "stun:stun.relay.metered.ca:80",
+                        },
+                        {
+                            "urls": "turn:a.relay.metered.ca:80",
+                            "username": "0e053deab7300457f9ecbb03",
+                            "credential": "QlkpT5au/NwMGyNj",
+                        },
+                        {
+                            "urls": "turn:a.relay.metered.ca:80?transport=tcp",
+                            "username": "0e053deab7300457f9ecbb03",
+                            "credential": "QlkpT5au/NwMGyNj",
+                        },
+                        {
+                            "urls": "turn:a.relay.metered.ca:443",
+                            "username": "0e053deab7300457f9ecbb03",
+                            "credential": "QlkpT5au/NwMGyNj",
+                        },
+                        {
+                            "urls": "turn:a.relay.metered.ca:443?transport=tcp",
+                            "username": "0e053deab7300457f9ecbb03",
+                            "credential": "QlkpT5au/NwMGyNj",
+                        },
+                    ],
+                }
                 )
 
-# var pcConfig = {
-#     'iceServers': [
-#         {
-#             'urls': 'stun:stun.l.google.com:19302'
-#         },
-#         {
-#             'urls': 'turn:xxx.xxx.xxx.xxx:3478',     <-- (my external IP address)
-#             'username': 'test',
-#             'password': 'test',
-#         }
-#     ]
-# };
+
+
+###########
+# RTCConfiguration(
+# {"iceServers":[{"urls": ["stun:eu-turn6.xirsys.com"]},
+# {"username": user,
+# "credential": cred,
+# "urls": ["turn:eu-turn6.xirsys.com:80?transport=udp",
+# "turn:eu-turn6.xirsys.com:3478?transport=udp",
+# "turn:eu-turn6.xirsys.com:80?transport=tcp",
+# "turn:eu-turn6.xirsys.com:3478?transport=tcp",
+# "turns:eu-turn6.xirsys.com:443?transport=tcp",
+# "turns:eu-turn6.xirsys.com:5349?transport=tcp"]}]}
+# )
