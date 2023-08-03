@@ -20,8 +20,6 @@ stop_stream_bottom = st.button('Stop')
 # cap.release()
 # cv2.destroyAllWindows()
 
-webrtc_streamer(key="example",
-                rtc_configuration={  # Add this line
-                    "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]
-                }
+webrtc_streamer(key="example"
+               # , rtc_configuration={     "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]    }
                 )
