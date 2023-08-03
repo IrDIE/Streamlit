@@ -1,12 +1,10 @@
 import streamlit as st
 from streamlit_webrtc import webrtc_streamer
 import cv2
-from aiortc import RTCConfiguration
 
 
-RTC_CONFIGURATION = RTCConfiguration(
-    {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
-)
+
+
 
 st.title('Video capturing from OpenCV')
 
@@ -23,15 +21,15 @@ stop_stream_bottom = st.button('Stop')
 # cap.release()
 # cv2.destroyAllWindows()
 
-webrtc_streamer(key="example" , rtc_configuration=RTC_CONFIGURATION
-# stun.l.google.com:19305
-                # {
-                #     "iceServers": [
-                #         {
-                #                "urls": "turn:a.relay.metered.ca:80",
-                #                 "username": "0e053deab7300457f9ecbb03",
-                #                 "credential": "QlkpT5au/NwMGyNj",
-                #         }
+webrtc_streamer(key="example"
+                , rtc_configuration=  # stun.l.google.com:19305
+                {
+                    "iceServers": [
+                        {
+                            urls: "turn:a.relay.metered.ca:443?transport=tcp",
+                            username: "0e053deab7300457f9ecbb03",
+                            credential: "QlkpT5au/NwMGyNj",
+                        }
 
                         # ,
                         # {
@@ -54,7 +52,7 @@ webrtc_streamer(key="example" , rtc_configuration=RTC_CONFIGURATION
                         #     "username": "0e053deab7300457f9ecbb03",
                         #     "credential": "QlkpT5au/NwMGyNj",
                         # },
-                #     ]
-                # }
+                    ]
+                }
                 )
 
