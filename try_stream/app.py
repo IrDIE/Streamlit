@@ -25,7 +25,9 @@ webrtc_streamer(key="example"
                 {
                     "iceServers": [
                         {
-                            "urls": ["stun:stun.l.google.com:19305"],
+                               "urls": "turn:a.relay.metered.ca:80",
+                                "username": "0e053deab7300457f9ecbb03",
+                                "credential": "QlkpT5au/NwMGyNj",
                         }
 
                         # ,
@@ -49,7 +51,7 @@ webrtc_streamer(key="example"
                         #     "username": "0e053deab7300457f9ecbb03",
                         #     "credential": "QlkpT5au/NwMGyNj",
                         # },
-                    ],
+                    ]
                 }
                 )
 
