@@ -1,7 +1,7 @@
 import streamlit as st
 from streamlit_webrtc import webrtc_streamer
 import cv2
-from aiortc import RTCPeerConnection
+from aiortc import RTCConfiguration
 
 
 RTC_CONFIGURATION = RTCConfiguration(
