@@ -19,5 +19,5 @@ while cap.isOpened() and not stop_stream_bottom:
 
 
 
-cap.release()
-cv2.destroyAllWindows()
+# cap.release()
+# cv2.destroyAllWindows()
