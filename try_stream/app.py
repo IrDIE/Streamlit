@@ -4,8 +4,6 @@ import cv2
 import av
 import time
 import math
-from comtypes import CLSCTX_ALL
-from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 import mediapipe as mp
 import hand_tracking_module
 
