@@ -5,8 +5,6 @@ import os
 import av
 import time
 import math
-import sys
-import subprocess
 
 
 #import mediapipe as mp
