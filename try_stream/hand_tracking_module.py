@@ -1,7 +1,3 @@
-import mediapipe as mp
-import time
-import math
-
 
 class handDetector():
     def __init__(self, mode : bool = False, max_num_hands : int  = 1, min_detection_confidence = 0.5, min_tracking_confidence = 0.5):
