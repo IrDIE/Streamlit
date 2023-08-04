@@ -7,5 +7,3 @@ numpy==1.25.0
 av==10.0.0
 comtypes==1.2.0
 mediapipe==0.10.2
-math
-time
