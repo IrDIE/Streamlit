@@ -1,9 +1,3 @@
 opencv-python-headless==4.7.0.72
-#streamlit==1.25.0
 streamlit_webrtc==0.45.1
-aiortc
-pycaw
 numpy==1.23.5
-av
-comtypes
-mediapipe
