@@ -1,9 +1,16 @@
 import streamlit as st
 from streamlit_webrtc import webrtc_streamer
 import cv2
+import os
 import av
 import time
 import math
+import sys
+import subprocess
+
+# implement pip as a subprocess:
+subprocess.check_call([sys.executable, '-m', 'pip', 'install',
+'mediapipe'])
 #import mediapipe as mp
 #import hand_tracking_module
 
