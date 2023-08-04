@@ -26,11 +26,11 @@ webrtc_streamer(key="example"
                 {
                     "iceServers": [
                         {
-                            urls: ["stun:fr-turn2.xirsys.com"]
+                            "urls": ["stun:fr-turn2.xirsys.com"]
                         }, {
-                            username: "PhUZzBq2wugeeSwzRxiwKCluHmp2OrZVfKvSWUMKVKJNK8B08EiCqVacNkLcfxkvAAAAAGTMeP1JcmluYQ==",
-                            credential: "1f5dbe1c-327c-11ee-a998-0242ac120004",
-                            urls: [
+                            "username": "PhUZzBq2wugeeSwzRxiwKCluHmp2OrZVfKvSWUMKVKJNK8B08EiCqVacNkLcfxkvAAAAAGTMeP1JcmluYQ==",
+                            "credential": "1f5dbe1c-327c-11ee-a998-0242ac120004",
+                            "urls": [
                                 "turn:fr-turn2.xirsys.com:80?transport=udp",
                                 "turn:fr-turn2.xirsys.com:3478?transport=udp",
                                 "turn:fr-turn2.xirsys.com:80?transport=tcp",
