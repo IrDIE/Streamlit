@@ -68,29 +68,3 @@ class handDetector():
             return False
 
 
-def main():
-    cap = cv2.VideoCapture(0)
-    prev_time = 0
-    curr_time = 0
-    detector = handDetector()
-
-    while True:
-        success, img = cap.read()
-        curr_time = time.time()
-        fps = 1 / (curr_time - prev_time)
-        prev_time = curr_time
-
-        img = detector.findHands(img)
-        positions_list = detector.find_positions(img, draw = True)
-
-
-        cv2.putText(img, str(int(fps)), (10, 70), cv2.FONT_HERSHEY_PLAIN, 3, (0, 0, 225), 1)
-
-        cv2.imshow("hi there", img)
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
-
-
-
-if __name__ == "__main__":
-    main()
