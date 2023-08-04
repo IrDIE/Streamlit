@@ -1,28 +1,41 @@
 import streamlit as st
 from streamlit_webrtc import webrtc_streamer
 import cv2
+import av
+import sys
+import time
+import numpy as np
 
-
-
+import hand_tracking_module
+from comtypes import CLSCTX_ALL
+from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 
 
 st.title('Video capturing from OpenCV')
 
 frame_ph = st.empty()
 stop_stream_bottom = st.button('Stop')
-# cap = cv2.VideoCapture(0)
-# while cap.isOpened() and not stop_stream_bottom:
-#     success, img = cap.read()
-#
-#     frame_ph.image(img, channels="BGR")
-#     cv2.imshow("Show from client webcam", img)
-#     if cv2.waitKey(1) & 0xFF == ord('q') or stop_stream_bottom:
-#         break
-# cap.release()
-# cv2.destroyAllWindows()
+
+devices = AudioUtilities.GetSpeakers()
+interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
+volume = interface.QueryInterface(IAudioEndpointVolume)
+volume.GetMasterVolumeLevel()
+min, max = volume.GetVolumeRange()[0], volume.GetVolumeRange()[1]
+st.markdown(f"min max = {min}, {max}")
+volume.SetMasterVolumeLevelScalar(0/100, None)
+
+def video_frame_callback(frame: av.VideoFrame, volume = volume) -> av.VideoFrame:
+    detector = hand_tracking_module.handDetector(min_tracking_confidence=.9)
+
+    image = frame.to_ndarray(format="bgr24")
+    img = detector.findHands(image)
+
+    return av.VideoFrame.from_ndarray(img, format="bgr24")
+
+
 
 webrtc_streamer(key="example"
-                , rtc_configuration=  # stun.l.google.com:19305
+                , rtc_configuration=
                 {
                     "iceServers": [
                         {
@@ -40,6 +53,8 @@ webrtc_streamer(key="example"
                             ]}
 
                     ]
-                }
+                },
+media_stream_constraints={"video": True, "audio": False},
+                video_frame_callback=video_frame_callback
                 )
 
