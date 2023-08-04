@@ -1,2 +1,4 @@
-opencv-python-headless<4.3
-streamlit_webrtc==0.45.1
+opencv-python-headless
+mediapipe
+streamlit
+streamlit_webrtc
