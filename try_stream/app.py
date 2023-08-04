@@ -4,8 +4,8 @@ import cv2
 import av
 import time
 import math
-import mediapipe as mp
-import hand_tracking_module
+#import mediapipe as mp
+#import hand_tracking_module
 
 
 
