@@ -3,7 +3,6 @@ from streamlit_webrtc import webrtc_streamer
 import cv2
 import av
 import time
-import numpy as np
 import mediapipe as mp
 import time
 import math
