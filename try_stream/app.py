@@ -7,9 +7,10 @@ import numpy as np
 import mediapipe as mp
 import time
 import math
-import hand_tracking_module
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
+import hand_tracking_module
+
 
 
 st.title('Video capturing from OpenCV')
