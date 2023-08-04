@@ -1,7 +1,7 @@
 streamlit==1.25.0
 streamlit-webrtc==0.45.1
+opencv-python
 opencv-contrib-python
-#opencv-python-headless
 aiortc
 pycaw
 numpy==1.25.0
