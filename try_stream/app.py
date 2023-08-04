@@ -8,8 +8,7 @@ import math
 import sys
 import subprocess
 
-# implement pip as a subprocess:
-subprocess.check_call([sys.executable, '-m', 'pip', 'install','mediapipe', '--user'])
+
 #import mediapipe as mp
 #import hand_tracking_module
 
