@@ -3,7 +3,7 @@ opencv-python-headless==4.5.1.48
 streamlit-webrtc==0.45.1
 aiortc
 pycaw
-numpy==1.25.0
-av==10.0.0
-comtypes==1.2.0
-mediapipe==0.10.2
+numpy
+av
+comtypes
+mediapipe
