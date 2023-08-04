@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_webrtc import webrtc_streamer
-from .cv2 import *
+import cv2
 import av
 import time
 import numpy as np
