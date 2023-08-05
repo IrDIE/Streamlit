@@ -3,7 +3,7 @@ import mediapipe as mp
 import streamlit as st
 import time
 import math
-
+from streamlit_webrtc import webrtc_streamer
 
 class handDetector():
     def __init__(self, mode : bool = False, max_num_hands : int  = 1, min_detection_confidence = 0.5, min_tracking_confidence = 0.5):
@@ -97,3 +97,35 @@ def main():
             break
 
 
+
+
+def main():
+    st.title("Live AI Squat Counter")
+    webrtc_streamer(key="example2"
+                    , rtc_configuration=
+                    {
+                        "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]
+                        #     [
+                        #     {
+                        #         "urls": ["stun:fr-turn2.xirsys.com"]
+                        #     }, {
+                        #         "username": "PhUZzBq2wugeeSwzRxiwKCluHmp2OrZVfKvSWUMKVKJNK8B08EiCqVacNkLcfxkvAAAAAGTMeP1JcmluYQ==",
+                        #         "credential": "1f5dbe1c-327c-11ee-a998-0242ac120004",
+                        #         "urls": [
+                        #             "turn:fr-turn2.xirsys.com:80?transport=udp",
+                        #             "turn:fr-turn2.xirsys.com:3478?transport=udp",
+                        #             "turn:fr-turn2.xirsys.com:80?transport=tcp",
+                        #             "turn:fr-turn2.xirsys.com:3478?transport=tcp",
+                        #             "turns:fr-turn2.xirsys.com:443?transport=tcp",
+                        #             "turns:fr-turn2.xirsys.com:5349?transport=tcp"
+                        #         ]}
+                        #
+                        # ]
+                    },
+                    media_stream_constraints={"video": True, "audio": False},
+
+                    )
+
+
+if __name__ == "__main__":
+    main()
