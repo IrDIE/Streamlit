@@ -1,16 +1,12 @@
 import streamlit as st
-#from streamlit_webrtc import webrtc_streamer
-import cv2
+from streamlit_webrtc import webrtc_streamer
 import os
 import av
 import time
 import math
 
-#import hand_tracking_module
 
-
-
-webrtc_streamer(key="example"
+webrtc_streamer(key="example2"
                 , rtc_configuration=
                 {
                     "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]
