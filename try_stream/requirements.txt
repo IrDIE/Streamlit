@@ -1,2 +1,2 @@
-mediapipe>=0.8.6
-protobuf~=3.19.0
+streamlit
+mediapipe
