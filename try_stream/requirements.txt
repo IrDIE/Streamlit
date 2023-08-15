@@ -2,4 +2,4 @@ numpy==1.23.0
 streamlit==1.10.0
 mediapipe==0.8.10.1
 streamlit_webrtc==0.42.0
-opencv-python-headless<4.3
+opencv-python
