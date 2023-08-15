@@ -1,5 +1,5 @@
 numpy==1.23.0
-streamlit
+streamlit==1.4.0
 mediapipe==0.8.10.1
 streamlit-webrtc
 opencv_contrib_python
