@@ -1,5 +1,5 @@
 import streamlit as st
-import cv2
+
 import av
 import time
 import math
