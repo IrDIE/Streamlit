@@ -1,5 +1,10 @@
-mediapipe==0.9.0.1
-numpy==1.24.1
-opencv_python==4.7.0.68
-streamlit==1.17.0
+cryptography==38.0.0
+pyOpenSSL
+aiortc
+numpy
+opencv-python-headless
+pydub
+mediapipe
+streamlit
 streamlit_webrtc
+streamlit-nested-layout
