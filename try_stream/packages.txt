@@ -1,8 +1,7 @@
-python3-opencv
+libgl1
 libgl1-mesa-glx
 libsm6
 libxext6
 ffmpeg
-libgl1
 libglib2.0-0
 libxrender1
