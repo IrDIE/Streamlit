@@ -1,7 +1,5 @@
-numpy
-opencv-python-headless
-pydub
-mediapipe
-streamlit
-streamlit-webrtc
-streamlit-nested-layout
+mediapipe==0.8.10.1
+numpy==1.23.0
+opencv-python-headless==4.6.0.66
+streamlit==1.10.0
+streamlit_webrtc==0.42.0
